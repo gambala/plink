@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 5dabff4b7bf4cc5e2e552efb78c6a3f3e44bed37
+  revision: 743128b2307b6e1bd59acb9dc8358592d264c573
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -114,7 +114,7 @@ GEM
       msgpack (~> 1.2)
     brakeman (6.1.2)
       racc
-    builder (3.2.4)
+    builder (3.3.0)
     capybara (3.40.0)
       addressable
       matrix
