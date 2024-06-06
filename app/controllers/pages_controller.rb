@@ -49,11 +49,11 @@ class PagesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_page
-    @page = Page.find(params[:id])
+    @page = Page.friendly.find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
   def page_params
-    params.require(:page).permit(:title, :text)
+    params.require(:page).permit(:title, :text, :slug)
   end
 end
