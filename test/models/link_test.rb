@@ -15,4 +15,9 @@ end
 #  url        :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  page_id    :bigint(8)        not null
+#
+# Indexes
+#
+#  index_links_on_page_id  (page_id)
 #

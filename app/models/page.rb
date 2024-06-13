@@ -1,7 +1,12 @@
 class Page < ApplicationRecord
   extend FriendlyId
+
   friendly_id :title, use: :slugged
+
   belongs_to :user
+  has_many :links, dependent: :destroy
+
+  validates :title, :slug, presence: true
   validates :user, uniqueness: true
 end
 
