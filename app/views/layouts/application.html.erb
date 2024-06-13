@@ -13,14 +13,34 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
-  <body>
-    <p style="color: green"><%= notice %></p>
-    <p style="color: red"><%= alert %></p>
-    <%= yield %>
+  <body class="bg-gray-900 text-gray-100">
+    <header class="bg-gray-800 shadow px-3">
+      <div class="container mx-auto sm:flex justify-between items-center py-4">
+        <div class="text-lg font-bold">
+          Public.link
+        </div>
+        <div>
+          <% if user_signed_in? %>
+            <span class="mr-4"><%= current_user.email %></span>
+            <div class="inline-block">
+              <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: 'bg-red-500 text-white px-4 py-2 rounded' %>
+            </div>
+          <% else %>
+            <%= link_to 'Sign in', new_user_session_path, class: 'bg-blue-500 text-white px-4 py-2 rounded' %>
+          <% end %>
+        </div>
+      </div>
+    </header>
+    <main class="py-6 px-3">
+      <div class="container mx-auto">
+        <p style="color: green"><%= notice %></p>
+        <p style="color: red"><%= alert %></p>
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>
