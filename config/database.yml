@@ -85,6 +85,3 @@ test:
 #
 production:
   <<: *default
-  database: plink_production
-  username: plink
-  password: <%= ENV["PLINK_DATABASE_PASSWORD"] %>
