@@ -17,6 +17,7 @@ end
 #  updated_at :datetime         not null
 #  slug       :string
 #  user_id    :bigint(8)        not null
+#  cover_data :jsonb
 #
 # Indexes
 #

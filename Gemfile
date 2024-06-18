@@ -4,6 +4,7 @@ gem "bootsnap", require: false
 gem "cssbundling-rails"
 gem "devise"
 gem "friendly_id"
+gem "image_processing" # shrine dependency
 gem "jsbundling-rails"
 gem "kamal", require: false
 gem "pg", "~> 1.1"
@@ -11,6 +12,7 @@ gem "propshaft"
 gem "puma", ">= 5.0"
 gem "rails", github: "rails/rails", branch: "main"
 gem "redis", ">= 4.0.1"
+gem "shrine"
 gem "stimulus-rails"
 gem "turbo-rails"
 gem "tzinfo-data", platforms: %i[windows jruby]

@@ -27,6 +27,11 @@
   </div>
 
   <div>
+    <%= form.label :cover, style: "display: block" %>
+    <%= form.file_field :cover, class: "bg-gray-700 p-1 border border-yellow-400 rounded" %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

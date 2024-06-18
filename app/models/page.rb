@@ -1,5 +1,6 @@
 class Page < ApplicationRecord
   extend FriendlyId
+  include CoverUploader::Attachment(:cover)
 
   friendly_id :title, use: :slugged
 
@@ -21,6 +22,7 @@ end
 #  updated_at :datetime         not null
 #  slug       :string
 #  user_id    :bigint(8)        not null
+#  cover_data :jsonb
 #
 # Indexes
 #

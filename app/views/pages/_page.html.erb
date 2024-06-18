@@ -1,4 +1,11 @@
 <div id="<%= dom_id page %>">
+  <% if page.cover.present? %>
+    <p>
+      <strong>Cover:</strong>
+      <%= image_tag page.cover.url %>
+    </p>
+  <% end %>
+
   <p>
     <strong>Title:</strong>
     <%= page.title %>
