@@ -7,7 +7,7 @@ gem "friendly_id"
 gem "image_processing" # shrine dependency
 gem "jsbundling-rails"
 gem "kamal", require: false
-gem "pg", "~> 1.1"
+gem "pg", "~> 1.5"
 gem "propshaft"
 gem "puma", ">= 5.0"
 gem "rails", github: "rails/rails", branch: "main"
